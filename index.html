@@ -234,8 +234,8 @@
                     window.option = broadcastingOption ? broadcastingOption.value : '';
                     if (option === 'Only Audio') {
                         constraints = {
-                            audio: true,
-                            video: false
+                            audio: false,
+                            video: true
                         };
 
                         if(DetectRTC.hasMicrophone !== true) {

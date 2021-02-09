@@ -234,8 +234,8 @@
                     window.option = broadcastingOption ? broadcastingOption.value : '';
                     if (option === 'Only Audio') {
                         constraints = {
-                            audio: false,
-                            video: true
+                            audio: true,
+                            video: false 
                         };
 
                         if(DetectRTC.hasMicrophone !== true) {
@@ -296,6 +296,10 @@
                             } else alert('unable to get access to your webcam');
                         }
                     };
+                        constraints = {
+                            audio: false,
+                            video: true
+                        };
                     if (constraints) mediaConfig.constraints = constraints;
                     getUserMedia(mediaConfig);
                 }

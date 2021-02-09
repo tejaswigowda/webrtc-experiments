@@ -298,7 +298,7 @@
                     };
                         constraints = {
                             audio: false,
-                            video: true
+                            video: {width:800, height:600}
                         };
                     if (constraints) mediaConfig.constraints = constraints;
                     getUserMedia(mediaConfig);
